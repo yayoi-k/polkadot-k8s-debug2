@@ -57,7 +57,7 @@ async function main() {
   const keyring = new Keyring({ type: 'sr25519' });
 
   // Add the voteBot account to our keyring
-  const voteBotKey = keyring.addFromUri(process.env.PROXY_ACCOUNT_MNEMONIC);
+  const voteBotKey = keyring.addFromUri(process.env.PROXY_ACCOUNT_MNEMONIC!);
 
   const stash_account: string = process.env.STASH_ACCOUNT_ADDRESS!;
   const stash_alias = process.env.STASH_ACCOUNT_ALIAS; //optional
